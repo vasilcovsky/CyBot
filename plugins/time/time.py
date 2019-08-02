@@ -17,5 +17,11 @@ class time(BotPlugin):
 
         #read html code
         data = response.json()
-        return(json.dumps(data, sort_keys=True, indent=4))
+        nice_json = json.dumps(data, sort_keys=True, indent=4)
+        
+        # try this:
+        # return "`{}`".format(nice_json)
+        
+        # or this:
+        return "'''{}".format(nice_json)
 
